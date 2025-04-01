@@ -157,4 +157,66 @@ body{
 .main{
     background-color: oklch(0.872 0.01 258.338);
     grid-area: main;
+    display: grid;
+    grid:
+        "main ann" auto
+        "main trend" auto
+        /70% 1fr;
+    padding-top: 30px;
+}
+.projects-section{
+    grid-area: projects-section;
+    display: grid;
+}
+.ann-section{
+    grid-area: ann;
+    display: grid;
+    grid: 
+        "header" auto
+        "card" auto
+        /auto;
+    padding: 20px 20px;
+    gap: 6px;
+}
+.trend-section{
+    grid-area: trend;
+    display: grid;
+    grid: 
+        "header" auto
+        "card" auto
+        /auto;
+    padding: 20px 20px;
+    gap: 10px;
+}
+.trend img{
+    grid-area: picture;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+.trending{
+    display: grid;
+    background-color: white;
+    padding: 30px;
+    align-content: center;
+    gap: 10px;
+    border-radius: 8px;
+}
+.trend{
+    display: grid;
+    grid: 
+        "picture user" auto
+        "picture text" auto
+        /auto auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.announcements{
+    display: grid;
+    background-color: white;
+    padding: 10px;
+    align-content: center;
+    gap: 10px;
+    border-radius: 8px;
 }
