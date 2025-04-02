@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     /* outline: 1px solid black;*/
+    cursor: pointer;
 }
 body{
     min-height: 100vh;
@@ -161,22 +162,61 @@ body{
     grid:
         "main ann" auto
         "main trend" auto
-        /70% 1fr;
+        /auto auto;
     padding-top: 30px;
+    align-content: flex-start;
 }
-.projects-section{
-    grid-area: projects-section;
+.card img{
+    height: 20px;
+}
+.card-container{
+    display: grid;
+    grid: 
+        "card1 card2" auto
+        "card3 card4" auto
+        "card5 card6" auto
+        /auto auto ;
+    gap: 20px;
+}
+.card{
+    background-color: white;
+    border-radius: 15px;
+    border-left: 10px solid orange;
+    box-shadow: 2px 1px 4px 1px rgba(0, 0, 0, 466);
+    font-size: 1em;
+    padding: 20px;
+    gap: 10px;
     display: grid;
 }
+.card div{
+    justify-self: flex-end;
+}
+.card p:first-of-type{
+    font-weight: 600;
+}
+.card p:last-of-type{
+    color: gray;
+}
+.main-section{
+    grid-area: main;
+    display: grid;
+    grid: 
+        "head" min-content
+        "cards" auto
+        /auto;
+    padding: 20px 20px;
+    gap: 10px;
+}
+
 .ann-section{
     grid-area: ann;
     display: grid;
     grid: 
         "header" auto
         "card" auto
-        /auto;
+        /1fr;
     padding: 20px 20px;
-    gap: 6px;
+    gap: 10px;
 }
 .trend-section{
     grid-area: trend;
@@ -201,6 +241,7 @@ body{
     align-content: center;
     gap: 10px;
     border-radius: 8px;
+    box-shadow: 2px 1px 4px 1px rgba(0, 0, 0, 466);
 }
 .trend{
     display: grid;
@@ -218,5 +259,5 @@ body{
     padding: 10px;
     align-content: center;
     gap: 10px;
-    border-radius: 8px;
+    border-radius: 15px;
 }
